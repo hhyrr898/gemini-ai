@@ -1,0 +1,20 @@
+{
+  "brand": "Gemini",
+  "domain": "gemini-ai.icu",
+  "locale": "zh-CN",
+  "blogDir": "src/blog",
+  "slugPrefix": "gemini",
+  "keywordsPath": "src/keywords.json",
+  "linkPool": [],
+  "minChars": 750,
+  "maxChars": 2200,
+  "fm": {
+    "layout": "article.njk",
+    "hasCategory": true,
+    "tagsStyle": "json",
+    "firstTag": null,
+    "permalink": false,
+    "coverKey": "heroImage",
+    "coverDir": "/static/posts/"
+  }
+}
