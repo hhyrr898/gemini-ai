@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% set docTitle = title or site.title %}
+    {% set metaDescription = description or site.description %}
+    {% set canonicalPath = canonicalUrl or page.url or "/" %}
+    {% set canonical = site.url + canonicalPath %}
+    {% set shareImage = (ogImage or coverImage or heroImage or site.ogImage) | assetUrl %}
+    {% set shareImageAbs = site.url + shareImage %}
+    <title>{% if page.url != "/" %}{{ docTitle }} | {{ site.brand }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ metaDescription }}">
+    <meta name="keywords" content="{{ keywords or pageKeywords or site.keywords }}">
+    {% if noindex %}
+    <meta name="robots" content="noindex,follow">
+    {% else %}
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    {% endif %}
+    <link rel="canonical" href="{{ canonical }}">
+    <meta property="og:type" content="{% if layout == 'article.njk' %}article{% else %}website{% endif %}">
+    <meta property="og:title" content="{{ docTitle }}">
+    <meta property="og:description" content="{{ metaDescription }}">
+    <meta property="og:url" content="{{ canonical }}">
+    <meta property="og:site_name" content="{{ site.brand }}">
+    <meta property="og:locale" content="{{ site.locale }}">
+    <meta property="og:image" content="{{ shareImageAbs }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ shareImageAbs }}">
+    <script type="application/ld+json">
+    {{ {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": site.brand,
+      "url": site.url,
+      "description": site.description
+    } | dump | safe }}
+    </script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/styles.css?v={{ site.assetVersion }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="/" aria-label="FinalShell">
+          <img src="/assets/logo.svg" alt="FinalShell 标识" width="42" height="42">
+          <span class="brand-text">FinalShell</span>
+        </a>
+        <nav class="nav" aria-label="主导航">
+          <a href="/">首页</a>
+          <a href="/dows.html">下载中心</a>
+          <a href="/blog/">博客</a>
+          <a href="/about/">关于</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <section>
+          <h2>Gemini 中文资料站</h2>
+          <p>Gemini 使用教程、注册流程、API 指南与常见问题排查。本站为第三方整理，非 Google 官方网站。<a href="/about/">关于本站</a></p>
+        </section>
+        <nav aria-label="页脚导航">
+          <a href="/">首页</a>
+          <a href="/dows.html">客户端下载</a>
+          <a href="/blog/">技术文章</a>
+          <a href="/about/">关于</a>
+          <a href="/sitemap.xml">站点地图</a>
+        </nav>
+        {% if friendLinks and friendLinks.length %}
+        <section class="flinks">
+          <h2>友情链接</h2>
+          <ul class="flinks-list">
+            {% for l in friendLinks %}<li><a href="{{ l.url }}" target="_blank" title="{{ l.title }}">{{ l.title }}</a></li>{% endfor %}
+          </ul>
+        </section>
+        {% endif %}
+      </div>
+    </footer>
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js" defer></script>
+    <script>window.addEventListener("load",function(){if(window.LA){LA.init({id:"{{ site.laId }}",ck:"{{ site.laId }}"})}})</script>
+  </body>
+</html>
