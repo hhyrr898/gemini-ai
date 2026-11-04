@@ -85,3 +85,10 @@ Gemini 有免费版和 Advanced 版（付费订阅）。免费版够日常问答
 ## 最后几句
 
 写到这里，三种入口都讲清楚了。我的建议是：普通用户从网页版开始，手机用户装个 App，开发者去 AI Studio 拿 API。别去找「客户端」了，它真的不存在。
+## 延伸阅读
+
+若需进一步查阅，可先看本站以下教程：
+
+- [Windows 生产部署](/blog/finalshell-windows-install-guide/)
+- [SSH 密钥轮换](/blog/finalshell-ssh-key-configuration/)
+- [macOS 工作站配置](/blog/finalshell-macos-install-steps/)

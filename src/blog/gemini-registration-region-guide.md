@@ -65,3 +65,10 @@ Gemini 的可使用地区是分批次开放的，官方页面会维护一份支�
 通过浏览器访问 `gemini.google.com` 即可，或者用谷歌官方应用里的入口。没有独立的 Gemini 客户端安装包，遇到号称「官方下载」的要留个心眼。
 
 写到这儿，我想起一句话：工具的门槛，往往不在工具本身。把账号这摊事理顺，后面的事会顺很多。
+## 延伸阅读
+
+若需进一步查阅，可先看本站以下教程：
+
+- [Windows 生产部署](/blog/finalshell-windows-install-guide/)
+- [macOS 工作站配置](/blog/finalshell-macos-install-steps/)
+- [SSH 密钥轮换](/blog/finalshell-ssh-key-configuration/)

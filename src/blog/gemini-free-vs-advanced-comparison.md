@@ -82,3 +82,10 @@ heroAlt: "Gemini 免费版与 Advanced 对比：普通用户怎么选 封面"
 写到这里，我的立场没变：先免费，后付费，让真实需求推着你升级，而不是被功能列表推着走。Gemini 免费版在 2025 年初的水平，已经能覆盖大多数普通用户的日常。等你每周都被额度或能力卡住两三次，那才是掏钱的信号。
 
 工具是拿来用的，不是拿来收藏的。选哪个版本，最后取决于你每天拿它干什么。
+## 延伸阅读
+
+若需进一步查阅，可先看本站以下教程：
+
+- [SFTP 发布工作流](/blog/finalshell-sftp-file-transfer/)
+- [Windows 生产部署](/blog/finalshell-windows-install-guide/)
+- [macOS 工作站配置](/blog/finalshell-macos-install-steps/)
